@@ -83,6 +83,7 @@ public class SignUp_Activity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
 
+
                 if(task.isSuccessful())
                 {
 
@@ -92,10 +93,21 @@ public class SignUp_Activity extends AppCompatActivity {
                     u.setName(name);
                     u.setEmail(userEmail);
 
+
+                    /*firebaseUser.sendEmailVerification()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+
+                                        }
+                                    });*/
+
                     reference.child(firebaseUser.getUid()).setValue(u)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
+
+
 
                                             if (task.isSuccessful())
                                             {
