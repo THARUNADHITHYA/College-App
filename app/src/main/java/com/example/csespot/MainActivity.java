@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button signoutBtn,pdfBtn;
+    Button signoutBtn,pdfBtn,chatBtn;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -22,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         signoutBtn = findViewById(R.id.signoutbtn);
         pdfBtn = findViewById(R.id.rvBtn);
+        chatBtn = findViewById(R.id.chatBtn);
+
+
+        chatBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,GroupChatActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         signoutBtn.setOnClickListener(new View.OnClickListener() {
