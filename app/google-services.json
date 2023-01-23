@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "309085198204",
+    "project_id": "cse-spot",
+    "storage_bucket": "cse-spot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309085198204:android:652e5a3ae7ecbcc1eef6f9",
+        "android_client_info": {
+          "package_name": "com.example.csespot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309085198204-gqrabfdbuvag46lnkspfe6q01164hiob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_xNXnf08Ll6Aj3QRPtJqMfdK7qqLfd9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309085198204-gqrabfdbuvag46lnkspfe6q01164hiob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
