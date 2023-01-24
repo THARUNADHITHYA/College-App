@@ -19,10 +19,18 @@
         android:theme="@style/Theme.CSESpot"
         tools:targetApi="31">
         <activity
-            android:name=".Feedback_Activity"
+            android:name=".About"
             android:exported="false"
             android:parentActivityName=".MainActivity"
             >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Feedback_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

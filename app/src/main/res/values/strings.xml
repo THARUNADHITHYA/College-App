@@ -6,4 +6,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="aboutapp">The Internal Communication App  is designed to improve communication and collaboration within the college community. One of the key features of this app is the group chat feature, which allows students and staff to easily communicate and collaborate with one another in real-time. This feature is particularly useful for students working on group projects or for staff members who need to share information quickly.
+Another useful feature of the app is the ability to download common announcement files. This feature makes it easy for students and staff to access important information and documents,at any time.
+The app also includes a feedback feature which allows students and staff to provide feedback and suggestions to the college administration. This feature makes it easy for the administration to keep track of feedback and respond to concerns in a timely manner.
+Finally, the app includes cloud notification feature that ensures that all users receive important announcements and updates in real-time. This feature is particularly useful for keeping students informed about important deadlines, events, and other information.</string>
+
 </resources>

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     Button signoutBtn;
 
     CardView pdf,chat,feedback;
+
+    TextView about;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         pdf = findViewById(R.id.pdfMaterialView);
         chat = findViewById(R.id.chatOption);
         feedback=findViewById(R.id.feedbackView);
+        about = findViewById(R.id.aboutText);
 
         pdf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,Feedback_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,About.class);
                 startActivity(intent);
             }
         });
