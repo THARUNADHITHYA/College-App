@@ -89,43 +89,30 @@ public class SignUp_Activity extends AppCompatActivity {
 
                     FirebaseUser firebaseUser = auth.getCurrentUser();
 
-                    User u = new User();
-                    u.setName(name);
-                    u.setEmail(userEmail);
+                        User u = new User();
+                        u.setName(name);
+                        u.setEmail(userEmail);
 
 
-                    /*firebaseUser.sendEmailVerification()
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
+                        reference.child(firebaseUser.getUid()).setValue(u)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
 
+
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(getApplicationContext(), "Account is Created", Toast.LENGTH_SHORT).show();
+                                            finish();
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "There is a problem in creating the account please try again", Toast.LENGTH_SHORT).show();
                                         }
-                                    });*/
 
-                    reference.child(firebaseUser.getUid()).setValue(u)
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
+                                        signUpBtn.setClickable(false);
 
 
+                                    }
+                                });
 
-                                            if (task.isSuccessful())
-                                            {
-                                                Toast.makeText(getApplicationContext(),"Account is Created",Toast.LENGTH_SHORT).show();
-                                                finish();
-                                            }
-
-                                            else
-                                            {
-                                                Toast.makeText(getApplicationContext(),"There is a problem in creating the account please try again",Toast.LENGTH_SHORT).show();
-                                            }
-
-                                            signUpBtn.setClickable(false);
-
-
-
-                                        }
-                                    });
 
 
                 }
