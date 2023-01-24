@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
@@ -70,13 +71,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
 
         TextView tvTitle;
         ImageButton ibDelete;
-        LinearLayout l1;
+        ConstraintLayout l1;
 
         public MessageAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle=(TextView) itemView.findViewById(R.id.tvTitle);
             ibDelete =(ImageButton) itemView.findViewById(R.id.ibDelete);
-            l1 = (LinearLayout) itemView.findViewById(R.id.l1Message);
+            l1 = (ConstraintLayout) itemView.findViewById(R.id.l1Message);
 
             ibDelete.setOnClickListener(new View.OnClickListener() {
                 @Override

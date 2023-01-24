@@ -80,14 +80,15 @@ public class Login_Page extends AppCompatActivity {
 
                 if (task.isSuccessful())
                 {
-                    Intent intent = new Intent(Login_Page.this,MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                    Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Login_Page.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                        Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Check your email and password",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                 }
             }
         });

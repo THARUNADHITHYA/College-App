@@ -1,6 +1,7 @@
 package com.example.csespot;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button signoutBtn,pdfBtn,chatBtn;
+    Button signoutBtn;
+
+    CardView pdf,chat;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -21,18 +24,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         signoutBtn = findViewById(R.id.signoutbtn);
-        pdfBtn = findViewById(R.id.rvBtn);
-        chatBtn = findViewById(R.id.chatBtn);
+
+        pdf = findViewById(R.id.pdfMaterialView);
+        chat = findViewById(R.id.chatOption);
 
 
-        chatBtn.setOnClickListener(new View.OnClickListener() {
+        pdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,PdfDownload_Activity.class);
+                startActivity(intent);
+                //finish();
+
+            }
+        });
+
+        chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,GroupChatActivity.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
+
+
 
 
         signoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -41,18 +57,10 @@ public class MainActivity extends AppCompatActivity {
                 auth.signOut();
                 Intent intent = new Intent(MainActivity.this,Login_Page.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
-        pdfBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,PdfDownload_Activity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
 
     }
