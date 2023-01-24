@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button signoutBtn;
 
-    CardView pdf,chat;
+    CardView pdf,chat,feedback;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         pdf = findViewById(R.id.pdfMaterialView);
         chat = findViewById(R.id.chatOption);
-
+        feedback=findViewById(R.id.feedbackView);
 
         pdf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Feedback_Activity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
