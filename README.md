@@ -26,7 +26,15 @@ This is an internal communication app for organizations that facilitates seamles
 ### Contributing
 We welcome contributions from everyone. If you would like to contribute to this project, please fork the repository and submit a pull request. We will review your changes and merge them if they are in line with the project's goals.
 
-
-
+### App Preview
+![Splash Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Splash%20screen.jpeg)
+![Login Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Login.jpeg)
+![Signup Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Signup.jpeg)
+![Home Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/HomeScreen.jpeg)
+![Chat Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Chat%20Screen%20-%20Copy.jpeg)
+![Filesharing Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/file%20Sharing.jpeg)
+![Feedback Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/feedback.jpeg)
+![Forget Password Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Peset%20pass.jpeg)
+![About Screen](https://github.com/THARUNADHITHYA/College-App/blob/main/Peset%20pass.jpeg)
 
 
